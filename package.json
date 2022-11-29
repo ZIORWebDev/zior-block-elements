@@ -1,0 +1,25 @@
+{
+	"name": "zr-blocks",
+	"title": "ZIOR Block Elements",
+	"description": "Custom block elements with ACF support",
+	"version": "0.1.0",
+	"homepage": "https://ziorweb.dev",
+	"author": {
+		"name": "Reyborn Webservices",
+		"url": "https://ziorweb.dev"
+	},
+	"license": "GPL 2.0",
+	"scripts": {
+		"build": "wp-scripts build"
+	},
+	"dependencies": {
+		"@wordpress/scripts": "^24.6.0",
+		"axios": "^1.2.0",
+		"classnames": "^2.3.2",
+		"lodash": "^4.17.15"
+	},
+	"devDependencies": {
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.0"
+	}
+}
