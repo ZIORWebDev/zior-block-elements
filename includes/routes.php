@@ -63,16 +63,8 @@ class ZIOR_Blocks_Routes {
 	 * @return array
 	 */
 	public static function get_acf_field_groups( $types ) {
-
-		// ACF >= 5.0.0
-		if ( function_exists( 'acf_get_field_groups' ) ) {
-			$acf_groups = acf_get_field_groups();
-		} else {
-			$acf_groups = apply_filters( 'acf/get_field_groups', [] );
-		}
-
+		$acf_groups = acf_get_field_groups();
 		$groups = [];
-
 		$options_page_groups_ids = [];
 
 		if ( function_exists( 'acf_options_page' ) ) {
@@ -123,7 +115,6 @@ class ZIOR_Blocks_Routes {
 			if ( empty( $options ) ) {
 				continue;
 			}
-
 			$groups[] = [
 				'label' => $acf_group['title'],
 				'value' => $options,

@@ -13,7 +13,6 @@ class ZIOR_Blocks_Loader {
 
 		add_action( 'init', [ $this, 'register' ] );
 		add_filter( 'block_categories_all', [ $this, 'register_block_category' ] );
-		add_action( 'wp_loaded', [ $this, 'register_block_attrs' ], 100 );
 	}
 
 	/**
@@ -41,10 +40,12 @@ class ZIOR_Blocks_Loader {
 	 * @return array
 	 */
 	public function get_js_vars() {
+		global $post;
 		return [
 			'ajax'          => admin_url( 'admin-ajax.php' ),
 			'blocks'        => apply_filters( 'zior_blocks', [] ),
 			'enabledBlocks' => $this->enabled_blocks(),
+			'post_type'     => get_post_type( $post )
 		];
 	}
 
@@ -70,14 +71,6 @@ class ZIOR_Blocks_Loader {
 		], ZR_BLOCKS_VERSION, true );
 
 		wp_localize_script( 'zr-blocks', 'zrBlocks', $this->get_js_vars() );
-	}
-
-	public function register_block_attrs() {
-		$registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
-
-		foreach ( $registered_blocks as $name => $block ) {
-			//TODO
-		}
 	}
 
 	public function enabled_blocks() {
