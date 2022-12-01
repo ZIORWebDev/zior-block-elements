@@ -31,7 +31,7 @@ class ZIOR_Blocks_Routes {
 	 * @return boolean
 	 */
 	public function check_permission( WP_REST_Request $request ) {
-		$permission = true;
+		$permission = false;
 		$nonce      = $request->get_header( 'x_wp_nonce' );
 		if ( wp_verify_nonce( $nonce, 'wp_rest' ) ) {
 			$permission = true;
