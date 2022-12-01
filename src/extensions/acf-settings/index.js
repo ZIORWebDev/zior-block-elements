@@ -21,7 +21,7 @@ wp.apiFetch({ path: "/zior-blocks/v1/acf-fields" }).then(fields =>
 );
 
 /**
- * Add restriction control attributes to block.
+ * Add acf control attributes to block.
  *
  * @param {object} settings Current block settings.
  * @param {string} name Name of block.
