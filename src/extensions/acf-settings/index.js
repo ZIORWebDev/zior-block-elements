@@ -84,6 +84,7 @@ const withACFFieldControls = createHigherOrderComponent(BlockEdit => {
 					<PanelBody
 						title={__("ZIOR - ACF Fields")}	
 						initialOpen={true}
+						icon={"paperclip"}
 					>
 						<ToggleControl
 							label={__("Replace content with ACF value")}
@@ -103,10 +104,6 @@ const withACFFieldControls = createHigherOrderComponent(BlockEdit => {
 								props.setAttributes({
 									zr_replace_with_acf_field_value: selected
 								});
-
-								if ( props.name == "core/legacy-widget" ) {
-									props.attributes.instance.raw["zr_replace_with_acf_field_value"] = selected;
-								}
 							}}
 						/>
 
@@ -121,7 +118,7 @@ const withACFFieldControls = createHigherOrderComponent(BlockEdit => {
 									return (
 									<optgroup label={field.label} key={field.label}>
 										{field.value.map((subfield) => (
-											<option value={subfield.value}>{subfield.label}</option>
+											<option value={subfield.value} key={subfield.value}>{subfield.label}</option>
 										))}
 									</optgroup>
 									)
@@ -130,10 +127,6 @@ const withACFFieldControls = createHigherOrderComponent(BlockEdit => {
 									props.setAttributes({
 										zr_replace_with_acf_field: selectedField
 									});
-
-									if ( props.name == "core/legacy-widget" ) {
-										props.attributes.instance.raw["zr_replace_with_acf_field"] = selectedField;
-									}
 								}}>
 								</SelectControl>
 						)}

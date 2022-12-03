@@ -1,5 +1,14 @@
-.zr-acf-field-controls {
-    border-top: 1px solid rgb(221, 221, 221) !important;
-    border-bottom: 1px solid rgb(221, 221, 221) !important;
-    margin-top: -1px;
+.components-panel {
+    .zr-acf-field-controls {
+        border-top: 1px solid rgb(221, 221, 221) !important;
+        border-bottom: 1px solid rgb(221, 221, 221) !important;
+        margin-top: -1px;
+    }
+}
+
+.popover-slot {
+    .zr-acf-field-toolbar .components-popover__content{
+        min-width: 300px;
+        padding: 20px;
+    }
 }
