@@ -44,8 +44,7 @@ class ZIOR_Blocks_Loader {
 		return [
 			'ajax'          => admin_url( 'admin-ajax.php' ),
 			'blocks'        => apply_filters( 'zior_blocks', [] ),
-			'enabledBlocks' => $this->enabled_blocks(),
-			'post_type'     => get_post_type( $post )
+			'enabledBlocks' => $this->enabled_blocks()
 		];
 	}
 
