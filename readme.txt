@@ -8,11 +8,11 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-ACF support for selected Gutenberg blocks. This will add an option to replace content with ACF field values.
+ACF support for selected Gutenberg blocks. This will add an option in block editor toolbar to replace content with ACF field values.
 
 == Description ==
 
-ZIOR Block Elements is a WordPress plugin that gives editors an option to replace block content with ACF values.
+ZIOR Block Elements is a WordPress plugin that gives editors an option to replace block content with ACF values in gutenberg editor toolbar.
 
 Features
 
