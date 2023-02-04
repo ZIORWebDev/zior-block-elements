@@ -19,6 +19,8 @@ Features
 * Custom block elements
 * ACF support
 
+Read documentation <a href="https://ziorweb.dev/docs/zior-block-elements.html" target="_blank">here</a>
+
 == Changelog ==
 
 = 0.1.0 =
